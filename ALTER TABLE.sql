@@ -1,0 +1,31 @@
+CREATE DATABASE ALTER_TABLE;
+USE ALTER_TABLE;
+
+CREATE TABLE S(
+NAME VARCHAR(50),
+AGE INT
+);
+
+INSERT INTO S
+VALUES
+('JAYESH',19),
+('KUSHAGR',20);
+
+SELECT * FROM STUDENT;
+
+
+#for creating new column 
+ALTER TABLE S
+ADD COLUMN Pincode INT;
+
+
+#from drop any column
+
+ALTER TABLE STUDENT
+DROP COLUMN Pincode;
+
+
+#for chaage table name
+
+ALTER TABLE S
+RENAME TO STUDENT;
