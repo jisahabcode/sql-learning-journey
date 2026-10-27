@@ -1,0 +1,40 @@
+CREATE DATABASE FULL_JOIN;
+
+USE FULL_JOIN;
+
+CREATE TABLE Student(
+ID INT,
+NAME VARCHAR(50)
+);
+
+INSERT INTO Student
+VALUES
+(141,'ADDY'),
+(172,'BADSHAH'),
+(174,'Casey');
+
+CREATE TABLE Course(
+ID INT,
+COURSE VARCHAR(50)
+);
+INSERT INTO Course
+VALUES
+(141,'BCA(AI&DA)'),
+(172,'BCA(AI&DA)'),
+(174,'BCA(AI&DA)'),
+(101,'BBA(BIA)'),
+(199,'B.COM');
+
+SELECT * FROM Student;
+SELECT * FROM Course;
+
+
+#Full_Join Not Exist in my_sql
+SELECT * FROM Student AS S
+LEFT JOIN Course AS C
+ON S.ID=C.ID
+UNION
+SELECT *
+FROM Student AS S
+RIGHT JOIN Course AS C
+ON S.ID=C.ID;
